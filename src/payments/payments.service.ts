@@ -27,8 +27,8 @@ export class PaymentsService {
 				quantity: item.quantity,
 			})),
 			mode: 'payment',
-			success_url: 'http://localhost:3010/payments/success',
-			cancel_url: 'http://localhost:3010/payments/cancel',
+			success_url: envs.stripe_success_url,
+			cancel_url: envs.stripe_cancel_url,
 		});
 
 		return session;
